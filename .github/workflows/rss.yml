@@ -4,6 +4,10 @@ on:
     - cron: '0 */3 * * *'  # 每3小时执行一次
   workflow_dispatch:  # 允许手动触发
 
+# 新增这部分权限配置
+permissions:
+  contents: write  # 允许读写仓库内容
+
 jobs:
   generate-rss:
     runs-on: ubuntu-latest
